@@ -16,9 +16,13 @@ data:
         wait: true
       - name: rollouts
         type: kustomize
-        url: github.com/codefresh-io/cli-v2/manifests/argo-rollouts?ref=v0.0.19
+        url: github.com/codefresh-io/cli-v2/manifests/argo-rollouts?ref=v0.0.21
         wait: false
-      version: 1.0.1
+      - name: workflows
+        type: kustomize
+        url: github.com/codefresh-io/cli-v2/manifests/argo-workflows?ref=v0.0.21
+        wait: false
+      version: 1.0.2
 kind: ConfigMap
 metadata:
   creationTimestamp: null

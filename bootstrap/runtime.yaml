@@ -12,7 +12,7 @@ data:
       components:
       - name: events
         type: kustomize
-        url: github.com/codefresh-io/cli-v2/manifests/argo-events?ref=v0.0.21
+        url: github.com/codefresh-io/cli-v2/manifests/argo-events?ref=v0.0.20
         wait: true
       - name: rollouts
         type: kustomize
@@ -22,7 +22,7 @@ data:
         type: kustomize
         url: github.com/codefresh-io/cli-v2/manifests/argo-workflows?ref=v0.0.21
         wait: false
-      version: 1.0.1
+      version: 1.0.2
 kind: ConfigMap
 metadata:
   creationTimestamp: null

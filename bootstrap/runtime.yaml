@@ -8,7 +8,7 @@ data:
       name: codefresh
       namespace: codefresh
     spec:
-      bootstrapSpecifier: github.com/codefresh-io/cli-v2/manifests/argo-cd?ref=v0.0.21
+      bootstrapSpecifier: github.com/codefresh-io/cli-v2/manifests/argo-cd?ref=v0.0.20
       components:
       - name: events
         type: kustomize
@@ -22,7 +22,7 @@ data:
         type: kustomize
         url: github.com/codefresh-io/cli-v2/manifests/argo-workflows?ref=v0.0.21
         wait: false
-      version: 1.0.0
+      version: 1.0.1
 kind: ConfigMap
 metadata:
   creationTimestamp: null

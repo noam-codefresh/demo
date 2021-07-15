@@ -3,3 +3,8 @@ kind: Kustomization
 namespace: codefresh
 resources:
 - ../../base
+
+images:
+ - name: docker.io/argoproj/argocli
+   newName: docker.io/argoproj/argocli
+   newTag: blahblah

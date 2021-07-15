@@ -8,3 +8,6 @@ images:
  - name: docker.io/argoproj/argocli
    newName: docker.io/argoproj/argocli
    newTag: blahblah
+ - name: docker.io/argoproj/workflow-controller
+   newName: docker.io/argoproj/workflow-controller
+   newTag: blahblah

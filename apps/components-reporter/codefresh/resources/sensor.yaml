@@ -1,0 +1,63 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Sensor
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/managed-by: cf
+  name: components-reporter
+  namespace: codefresh
+spec:
+  dependencies:
+  - eventName: components
+    eventSourceName: components-reporter
+    name: components
+  - eventName: runtime
+    eventSourceName: components-reporter
+    name: runtime
+  eventBusName: codefresh-eventbus
+  triggers:
+  - retryStrategy:
+      duration: 0
+      steps: 3
+    template:
+      conditions: components
+      http:
+        headers:
+          Content-Type: application/json
+        method: POST
+        payload:
+        - dest: data
+          src:
+            dataKey: body
+            dependencyName: components
+        secureHeaders:
+        - name: Authorization
+          valueFrom:
+            secretKeyRef:
+              key: token
+              name: codefresh-token
+        url: https://g.codefresh.io/argo/api/events
+      name: components
+  - retryStrategy:
+      duration: 0
+      steps: 3
+    template:
+      conditions: runtime
+      http:
+        headers:
+          Content-Type: application/json
+        method: POST
+        payload:
+        - dest: data
+          src:
+            dataKey: body
+            dependencyName: runtime
+        secureHeaders:
+        - name: Authorization
+          valueFrom:
+            secretKeyRef:
+              key: token
+              name: codefresh-token
+        url: https://g.codefresh.io/argo/api/events
+      name: runtime
+status: {}

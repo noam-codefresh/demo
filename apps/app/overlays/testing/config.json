@@ -1,0 +1,1 @@
+{"appName":"app","userGivenName":"app","destNamespace":"testing","destServer":"https://kubernetes.default.svc","srcPath":"apps/app/overlays/testing","srcRepoURL":"https://github.com/noam-codefresh/demo.git","srcTargetRevision":""}

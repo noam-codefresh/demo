@@ -119,12 +119,6 @@ spec:
       - ADD
       - UPDATE
       - DELETE
-      filter:
-        createdBy: null
-        labels:
-        - key: app.kubernetes.io/instance
-          operation: ==
-          value: default-git-source-synchronize
       group: argoproj.io
       namespace: codefresh
       resource: workflows

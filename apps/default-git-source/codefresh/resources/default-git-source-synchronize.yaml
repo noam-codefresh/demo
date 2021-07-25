@@ -1,0 +1,40 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "10"
+  creationTimestamp: null
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+  labels:
+    app.kubernetes.io/managed-by: cf
+    app.kubernetes.io/name: default-git-source-synchronize
+  name: default-git-source-synchronize
+  namespace: codefresh
+spec:
+  destination:
+    namespace: codefresh
+    server: https://kubernetes.default.svc
+  ignoreDifferences:
+  - group: argoproj.io
+    jsonPointers:
+    - /status
+    kind: Application
+  project: codefresh
+  source:
+    path: apps/default-git-source/codefresh
+    repoURL: https://github.com/noam-codefresh/demo_git_source.git
+  syncPolicy:
+    automated:
+      allowEmpty: true
+      prune: true
+      selfHeal: true
+status:
+  health: {}
+  summary: {}
+  sync:
+    comparedTo:
+      destination: {}
+      source:
+        repoURL: ""
+    status: ""

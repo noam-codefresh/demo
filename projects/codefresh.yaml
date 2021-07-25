@@ -6,6 +6,8 @@ metadata:
     argocd.argoproj.io/sync-options: PruneLast=true
     argocd.argoproj.io/sync-wave: "-2"
   creationTimestamp: null
+  labels:
+    codefresh.io/entity: runtime
   name: codefresh
   namespace: codefresh
 spec:
@@ -53,6 +55,7 @@ spec:
       labels:
         app.kubernetes.io/managed-by: argocd-autopilot
         app.kubernetes.io/name: '{{ appName }}'
+        codefresh.io/entity: component
       name: codefresh-{{ userGivenName }}
       namespace: codefresh
     spec:

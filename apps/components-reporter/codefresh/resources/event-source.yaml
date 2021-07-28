@@ -1,0 +1,48 @@
+apiVersion: argoproj.io/v1alpha1
+kind: EventSource
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/managed-by: cf
+  name: components-reporter
+  namespace: codefresh
+spec:
+  eventBusName: codefresh-eventbus
+  resource:
+    components:
+      eventTypes:
+      - ADD
+      - UPDATE
+      - DELETE
+      filter:
+        createdBy: null
+        labels:
+        - key: codefresh.io/entity
+          operation: ==
+          value: component
+      group: argoproj.io
+      namespace: codefresh
+      resource: applications
+      version: v1alpha1
+    runtime:
+      eventTypes:
+      - ADD
+      - UPDATE
+      - DELETE
+      filter:
+        createdBy: null
+        labels:
+        - key: codefresh.io/entity
+          operation: ==
+          value: runtime
+      group: argoproj.io
+      namespace: codefresh
+      resource: appprojects
+      version: v1alpha1
+  service:
+    ports:
+    - port: 12000
+      targetPort: 12000
+  template:
+    serviceAccountName: components-reporter-sa
+status: {}

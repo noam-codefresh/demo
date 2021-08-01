@@ -1,1 +1,15 @@
-{"appName":"app","userGivenName":"app","destNamespace":"default","destServer":"https://kubernetes.default.svc","srcPath":"apps/app/overlays/staging","srcRepoURL":"https://github.com/noam-codefresh/demo.git","srcTargetRevision":"","labels":{"another_label":"another_value","some_label":"some-value"}}
+{
+   "appName":"app",
+   "userGivenName":"app",
+   "destNamespace":"default",
+   "destServer":"https://kubernetes.default.svc",
+   "srcPath":"apps/app/overlays/staging",
+   "srcRepoURL":"https://github.com/noam-codefresh/demo.git",
+   "srcTargetRevision":"",
+   "labels":{
+     "app.kubernetes.io/managed-by": "argocd-autopilot"
+     "app.kubernetes.io/name": "app-from-json"
+     "another_label":"another_value",
+     "some_label":"some-value"
+   }
+}

@@ -53,7 +53,7 @@ spec:
       labels:
         another_label: '{{ values.another_label }}'
         app.kubernetes.io/managed-by: argocd-autopilot
-        app.kubernetes.io/name: '{{ name }}'
+        app.kubernetes.io/name: '{{ appName }}'
         some_label: '{{ values.some_label }}'
       name: staging-{{ userGivenName }}
       namespace: argocd

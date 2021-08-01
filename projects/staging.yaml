@@ -50,8 +50,7 @@ spec:
   syncPolicy: {}
   template:
     metadata:
-      labels: 
-        something: "value"
+      labels: "{{ labels }}"
       name: staging-{{ userGivenName }}
       namespace: argocd
     spec:

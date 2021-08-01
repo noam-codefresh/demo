@@ -50,11 +50,7 @@ spec:
   syncPolicy: {}
   template:
     metadata:
-      labels:
-        another_label: '{{ labels.another_label }}'
-        app.kubernetes.io/managed-by: argocd-autopilot
-        app.kubernetes.io/name: '{{ appName }}'
-        some_label: '{{ labels.some_label }}'
+      labels: {{ labels }}
       name: staging-{{ userGivenName }}
       namespace: argocd
     spec:

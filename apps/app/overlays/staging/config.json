@@ -6,10 +6,5 @@
    "srcPath":"apps/app/overlays/staging",
    "srcRepoURL":"https://github.com/noam-codefresh/demo.git",
    "srcTargetRevision":"",
-   "labels":{
-     "app.kubernetes.io/managed-by": "argocd-autopilot",
-     "app.kubernetes.io/name": "app-from-json",
-     "another_label": "another_value",
-     "some_label":"some-value"
-   }
+   "labels": "\n    \"app.kubernetes.io/managed-by\": \"argocd-autopilot\"\n"
 }

@@ -53,7 +53,7 @@ spec:
       labels:
         app.kubernetes.io/managed-by: argocd-autopilot
         app.kubernetes.io/name: '{{ appName }}'
-        codefresh.io/entity: '{{ labels.type }}'
+        codefresh.io/entity: '{{ labels.entity }}'
       name: codefresh-{{ userGivenName }}
       namespace: codefresh
     spec:

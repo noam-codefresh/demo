@@ -1,0 +1,1 @@
+{"appName":"default-git-source","userGivenName":"default-git-source","destNamespace":"codefresh","destServer":"https://kubernetes.default.svc","srcPath":"apps/default-git-source/codefresh/resources","srcRepoURL":"https://github.com/noam-codefresh/demo.git","srcTargetRevision":"","labels":{"codefresh_io_entity":"git-source"}}

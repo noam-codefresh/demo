@@ -17,4 +17,4 @@ patches:
         path: /spec/template/spec/containers/0/env
         value:
           - name: BASE_HREF
-            value: /workflows/
+            value: /argo/

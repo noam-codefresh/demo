@@ -6,6 +6,9 @@ metadata:
     argocd.argoproj.io/sync-options: PruneLast=true
     argocd.argoproj.io/sync-wave: "-2"
   creationTimestamp: null
+  labels:
+    codefresh.io/entity: runtime
+    codefresh.io/runtimeVersion: 0.0.80
   name: noam-6
   namespace: noam-6
 spec:

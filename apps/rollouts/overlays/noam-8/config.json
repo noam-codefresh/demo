@@ -1,1 +1,0 @@
-{"appName":"rollouts","userGivenName":"rollouts","destNamespace":"noam-8","destServer":"https://kubernetes.default.svc","srcPath":"apps/rollouts/overlays/noam-8","srcRepoURL":"https://github.com/noam-codefresh/demo.git","srcTargetRevision":"","labels":{"codefresh_io_entity":"component"}}

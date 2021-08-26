@@ -1,0 +1,1 @@
+{"appName":"events","userGivenName":"events","destNamespace":"noam-4","destServer":"https://kubernetes.default.svc","srcPath":"apps/events/overlays/noam-4","srcRepoURL":"https://github.com/noam-codefresh/demo.git","srcTargetRevision":"","labels":{"codefresh_io_entity":"component"}}

@@ -2,7 +2,7 @@ apiVersion: v1
 data:
   base-url: http://local.codefresh.io
   runtime: |
-    key: value
+    key: value2
     apiVersion: codefresh.io/v1alpha1
     kind: Runtime
     metadata:

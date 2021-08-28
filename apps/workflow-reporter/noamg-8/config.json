@@ -1,0 +1,1 @@
+{"appName":"workflow-reporter","userGivenName":"workflow-reporter","destNamespace":"noamg-8","destServer":"https://kubernetes.default.svc","srcPath":"apps/workflow-reporter/noamg-8/resources","srcRepoURL":"https://github.com/noam-codefresh/demo.git","srcTargetRevision":"","labels":{"codefresh_io_entity":"component"}}

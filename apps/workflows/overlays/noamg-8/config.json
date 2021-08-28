@@ -1,1 +1,0 @@
-{"appName":"workflows","userGivenName":"workflows","destNamespace":"noamg-8","destServer":"https://kubernetes.default.svc","srcPath":"apps/workflows/overlays/noamg-8","srcRepoURL":"https://github.com/noam-codefresh/demo.git","srcTargetRevision":"","labels":{"codefresh_io_entity":"component"}}
